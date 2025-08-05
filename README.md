@@ -1,1 +1,1 @@
-# SQL-Challenges
+# SQL-Challenges🔍
