@@ -41,7 +41,7 @@ SELECT COUNT(*) AS total_trips_2020
 FROM divvy_trip_2020;
 ```
 ### Result:
- <img src="Total_trip_2020.png" alt="Total_trip_2020.png">
+ <img src="https://github.com/apex-analytics-solutions/SQL-Challenges/blob/31fc8ccc4870870b73d63426f9286c7626dcb371/Case%20Study%20%231%20-Divvy-Trip-2020/Assets/Total_trip_2020.png" alt="Total_trip_2020.png">
 
 * <p> This query counts all the rows in the <code>divvy_trip_2020</code> table to get the total number of trips for the year 2020.</p> 
 * <p>The <code>SELECT</code> statement uses <code>COUNT(*)</code> to count all rows in the <code>divvy_trip_2020</code> table.</p>
@@ -57,7 +57,7 @@ SELECT member_casual,count(*) AS avg_member_casual
 FROM divvy_trip_2020 group by member_casual;
 ```
 ### Result:
- <img src="avg_member_casual.png" alt="avg_member_casual.png">
+ <img src="https://github.com/apex-analytics-solutions/SQL-Challenges/blob/31fc8ccc4870870b73d63426f9286c7626dcb371/Case%20Study%20%231%20-Divvy-Trip-2020/Assets/avg_member_casual.png" alt="avg_member_casual.png">
 
 * <p>This query groups the trips by <code>member_casual</code> and counts the number of trips for each category (member and casual). It incorrectly labels the result as "avg_member_casual" when it is actually a count.</p>
 
@@ -73,7 +73,7 @@ SELECT AVG(TIMESTAMPDIFF(SECOND, started_at, ended_at)) AS average_trip_duration
 FROM divvy_trip_2020;
 ```
 ### Result:
- <img src="avg-trip-duration.png" alt="avg-trip-duration.png">
+ <img src="https://github.com/apex-analytics-solutions/SQL-Challenges/blob/31fc8ccc4870870b73d63426f9286c7626dcb371/Case%20Study%20%231%20-Divvy-Trip-2020/Assets/avg-trip-duration.png" alt="avg-trip-duration.png">
 
 * <p>This query calculates the average trip duration in seconds by finding the difference between the <code>started_at</code> and <code>ended_at</code> timestamps for all trips.</p>
 
@@ -94,7 +94,7 @@ FROM
     divvy_trip_2020;
 ```
 ### Result:
- <img src="trips.png" alt="trips.png">
+ <img src="https://github.com/apex-analytics-solutions/SQL-Challenges/blob/31fc8ccc4870870b73d63426f9286c7626dcb371/Case%20Study%20%231%20-Divvy-Trip-2020/Assets/trips.png" alt="trips.png">
 
 * <p>This query finds the maximum and minimum trip durations in seconds by calculating the difference between the <code>started_at</code> and <code>ended_at</code> timestamps for all trips.</p>
 * <p>The <code>SELECT</code> statement calculates the maximum and minimum trip durations.</p>
@@ -123,7 +123,7 @@ FROM
     RideCounts;
 ```
 ### Result:
- <img src="total_rides.png" alt="total_rides.png">
+ <img src="https://github.com/apex-analytics-solutions/SQL-Challenges/blob/31fc8ccc4870870b73d63426f9286c7626dcb371/Case%20Study%20%231%20-Divvy-Trip-2020/Assets/total_rides.png" alt="total_rides.png">
 
 * <p>This query uses a Common Table Expression (CTE) named <code>RideCounts</code> to first count the total rides for each <code>member_casual</code> type. Then, it calculates the percentage of rides for each type by dividing their total rides by the overall total and multiplying by 100.</p>
 * <p>The <code>WITH RideCounts AS (...)</code> clause creates a Common Table Expression (CTE) to first calculate the total number of rides for each <code>member_casual</code> type.</p>
@@ -148,7 +148,7 @@ LIMIT 1;
 
 ```
 ### Result:
- <img src="month.png" alt="month.png">
+ <img src="https://github.com/apex-analytics-solutions/SQL-Challenges/blob/31fc8ccc4870870b73d63426f9286c7626dcb371/Case%20Study%20%231%20-Divvy-Trip-2020/Assets/month.png" alt="month.png">
 
 * <p>This query extracts the month name from the <code>started_at</code> timestamp, counts the number of trips for each month, and then orders the results in descending order to find the month with the most trips. It limits the result to the top one.</p>
 * <p>The <code>SELECT</code> statement selects the month name and the count of trips for that month.</p>
@@ -174,7 +174,7 @@ LIMIT 1;
 
 ```
 ### Result:
- <img src="day.png" alt="day.png">
+ <img src="https://github.com/apex-analytics-solutions/SQL-Challenges/blob/31fc8ccc4870870b73d63426f9286c7626dcb371/Case%20Study%20%231%20-Divvy-Trip-2020/Assets/day.png" alt="day.png">
 
 * <p>This query extracts the day name from the <code>started_at</code> timestamp, counts the number of trips for each day of the week, and then orders the results in descending order to find the busiest day. It limits the result to the top one.</p>
 * <p>The <code>SELECT</code> statement selects the day name and the count of trips for that day.</p>
@@ -202,7 +202,7 @@ LIMIT 1;
 
 ```
 ### Result:
- <img src="start-station.png" alt="start-station.png">
+ <img src="https://github.com/apex-analytics-solutions/SQL-Challenges/blob/31fc8ccc4870870b73d63426f9286c7626dcb371/Case%20Study%20%231%20-Divvy-Trip-2020/Assets/start-station.png" alt="start-station.png">
 
 * <p>This query counts the number of trips starting at each station, ignoring trips with a null starting station. It then orders the results in descending order to find the most popular starting station and limits the result to the top one.</p>
 * <p>The <code>SELECT</code> statement selects the station name and the count of trips originating from that station.</p>
@@ -230,7 +230,7 @@ LIMIT 1;
 
 ```
 ### Result:
- <img src="ended-station.png" alt="ended-station.png">
+ <img src="https://github.com/apex-analytics-solutions/SQL-Challenges/blob/31fc8ccc4870870b73d63426f9286c7626dcb371/Case%20Study%20%231%20-Divvy-Trip-2020/Assets/ended-station.png" alt="ended-station.png">
 
 * <p>This query counts the number of trips ending at each station, ignoring trips with a null ending station. It then orders the results in descending order to find the most popular ending station and limits the result to the top one.</p>
 * <p>The <code>SELECT</code> statement selects the station name and the count of trips ending at that station.</p>
@@ -251,4 +251,5 @@ The analysis of Divvy trip data from 2020 provides a clear picture of the bike-s
 The analysis of trip duration highlights a wide range, from a negative value (an indication of a data quality issue) to extremely long rides. The average trip duration is approximately 22 minutes.
 
 The usage patterns show that the service is used throughout the year, with a seemingly busiest month in January. However, this finding should be re-evaluated due to the unusual nature of a winter month being the busiest. The data also suggests that Tuesdays are the most popular day of the week for rides. The station located at Canal St & Adams St serves as both the most popular starting and ending point, which suggests a high volume of round-trip rides or a central hub for commuters.
+
 
